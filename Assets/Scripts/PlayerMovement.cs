@@ -13,13 +13,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckPoint;
     private float movementY = 1f;
     public float slowDownRate = 2f; // How quickly to slow down (units per second)
+    private float platformRotation;
     public float groundDistance = 0.4f;
     // private float radius;
     public float playerSpeed = 8f;
     public float jumpForce = 2f;
-    
-
     private bool groundCheck;
+    private bool platformCheck;
 
     // Start is called before the first frame update
 
@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         groundCheck = Physics.CheckSphere(groundCheckPoint.position, groundDistance, groundLayer);
+        // platformRotation = ;
 
         Debug.Log("Ground Check: " + groundCheck);
 

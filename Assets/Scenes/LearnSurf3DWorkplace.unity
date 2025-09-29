@@ -2034,7 +2034,7 @@ MonoBehaviour:
   groundCheckPoint: {fileID: 632222530}
   slowDownRate: 2
   groundDistance: 0.4
-  playerSpeed: 12
+  playerSpeed: 20
   jumpForce: 0.5
 --- !u!136 &2033346389
 CapsuleCollider:
