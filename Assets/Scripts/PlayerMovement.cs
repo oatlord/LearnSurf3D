@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider>();
         radius = capsuleCollider.radius;
     }
-
     void Awake()
     {
         playerInput = new InputSystem_Actions();
