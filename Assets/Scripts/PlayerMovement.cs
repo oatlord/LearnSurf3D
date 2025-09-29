@@ -8,11 +8,16 @@ public class PlayerMovement : MonoBehaviour
 {
     private InputSystem_Actions playerInput;
     private Rigidbody rb;
-    private CapsuleCollider capsuleCollider;
+    // private CapsuleCollider capsuleCollider;
     public LayerMask groundLayer;
-    private float radius;
+    public Transform groundCheckPoint;
+    private float movementY = 1f;
+    public float slowDownRate = 2f; // How quickly to slow down (units per second)
+    public float groundDistance = 0.4f;
+    // private float radius;
     public float playerSpeed = 8f;
     public float jumpForce = 2f;
+    
 
     private bool groundCheck;
 
@@ -21,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
-        radius = capsuleCollider.radius;
+        // capsuleCollider = GetComponent<CapsuleCollider>();
+        // radius = capsuleCollider.radius;
     }
     void Awake()
     {
@@ -41,22 +46,31 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        groundCheck = Physics.CheckSphere(transform.position + Vector3.up*(radius*0.9f), radius, groundLayer);
+        groundCheck = Physics.CheckSphere(groundCheckPoint.position, groundDistance, groundLayer);
+
         Debug.Log("Ground Check: " + groundCheck);
 
         if (rb != null)
         {
             Vector2 inputVector = playerInput.Player.Move.ReadValue<Vector2>();
-            rb.MovePosition(transform.position + new Vector3(0, 0, 1) * Time.deltaTime * playerSpeed);
+
+            // Gradually slow down movementY if SlowDown is pressed
+            if (playerInput.Player.SlowDown.IsPressed() && groundCheck)
+            {
+                Debug.Log("Slow Down action triggered");
+                movementY = Mathf.MoveTowards(movementY, 0f, slowDownRate * Time.deltaTime);
+            }
+            else
+            {
+                // Restore movementY to 1 when SlowDown is not pressed
+                movementY = Mathf.MoveTowards(movementY, 1f, slowDownRate * Time.deltaTime);
+            }
+
+            // Use movementY for forward/backward movement
+            Vector3 movement = new Vector3(inputVector.x, 0, movementY);
+            rb.MovePosition(transform.position + movement * Time.deltaTime * playerSpeed);
 
             Debug.Log("Rigidbody is present");
-
-            if (playerInput.Player.Move.IsPressed())
-            {
-                Debug.Log("Input Vector: " + inputVector);
-                Vector3 movement = new Vector3(inputVector.x, 0, 1);
-                rb.MovePosition(transform.position + movement * Time.deltaTime * playerSpeed);
-            }
 
             if (playerInput.Player.Jump.IsPressed() && groundCheck)
             {
