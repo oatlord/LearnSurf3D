@@ -71,5 +71,5 @@ def repair_unity_yaml(scene_path, output_path=None, log_path=None):
 
 # Example usage
 if __name__ == "__main__":
-    scene_file = r"C:\Users\Ren\UNITY\LearnSurf3DFixTestCopy\Assets\Scenes\LearnSurf3DWorkplace.unity"
+    scene_file = r"C:\Users\Ren\UNITY\LearnSurf3D\LearnSurf3D\Assets\Scenes\LearnSurf3DWorkplace.unity"
     repair_unity_yaml(scene_file)
