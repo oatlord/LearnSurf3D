@@ -4,6 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 95ce65952c2f8504db8c2a225a5cb7c7
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: a4e60dd362049cc479c8c42918de31c5
+  - enabled: 1
+    path: Assets/Scenes/CategoriesScene.unity
+    guid: db627ba463a15934ab7df97f9ed52d89
+  - enabled: 1
+    path: Assets/Scenes/LearnSurf3DWorkplace.unity
+    guid: e7d1249a85579114ab0047ff00c6d7e1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b2b07d4b708b06d47b53f35b5946e0cc, type: 3}
