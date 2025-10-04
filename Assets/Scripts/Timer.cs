@@ -42,9 +42,9 @@ public class Timer : MonoBehaviour
     void DisplayTime()
     {
 
-    minutes = Mathf.Floor(remainingTime / 60);
-    seconds = Mathf.Floor(remainingTime % 60);
-    milliseconds = Mathf.Floor((remainingTime % 1) * 1000);
+        minutes = Mathf.Floor(remainingTime / 60);
+        seconds = Mathf.Floor(remainingTime % 60);
+        milliseconds = Mathf.Floor((remainingTime % 1) * 1000);
 
         string timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
         Debug.Log("Time: " + timeString);
