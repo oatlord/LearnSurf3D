@@ -13,9 +13,9 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minutes = remainingTime / 60;
-        seconds = remainingTime % 60;
-        milliseconds = remainingTime % 60 * 100;
+    minutes = Mathf.Floor(remainingTime / 60);
+    seconds = Mathf.Floor(remainingTime % 60);
+    milliseconds = (remainingTime % 1) * 1000;
 
         timerText = GetComponentInChildren<TextMeshProUGUI>();
 
@@ -41,9 +41,10 @@ public class Timer : MonoBehaviour
 
     void DisplayTime()
     {
-        minutes = Mathf.Floor(remainingTime / 60);
-        seconds = Mathf.Floor(remainingTime % 60);
-        milliseconds = Mathf.Floor(remainingTime % 60 * 100);
+
+    minutes = Mathf.Floor(remainingTime / 60);
+    seconds = Mathf.Floor(remainingTime % 60);
+    milliseconds = Mathf.Floor((remainingTime % 1) * 1000);
 
         string timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
         Debug.Log("Time: " + timeString);
