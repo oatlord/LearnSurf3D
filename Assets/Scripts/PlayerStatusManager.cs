@@ -6,8 +6,13 @@ public class PlayerStatusManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject player;
+    public GameObject hpPointsArray;
+
     private Rigidbody playerRb;
+
     public float nitroForce = 10f;
+    public int playerLives = 3;
+
     void Start()
     {
         playerRb = player.GetComponent<Rigidbody>();
@@ -32,5 +37,25 @@ public class PlayerStatusManager : MonoBehaviour
     public void PlayerFall()
     {
         Debug.Log("Player fell off of map");
+        PlayerLoseLives();
+        player.SendMessage("PlayerRespawnToCheckpoint");
+    }
+
+    public void PlayerLoseLives()
+    {
+        playerLives -= 1;
+        Debug.Log("Player Lives: " + playerLives);
+        if (playerLives < 0)
+        {
+            Debug.Log("Game Over");
+        }
+        else
+        {
+            // Deactivate one of the HP points in the UI
+            if (hpPointsArray != null && hpPointsArray.transform.childCount >= playerLives + 1)
+            {
+                hpPointsArray.transform.GetChild(playerLives).gameObject.SetActive(false);
+            }
+        }
     }
 }
