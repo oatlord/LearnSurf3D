@@ -16,6 +16,10 @@ public class PlayerStatusManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.transform.position.y < -10f)
+        {
+            PlayerFall();
+        }
 
     }
 
@@ -23,5 +27,10 @@ public class PlayerStatusManager : MonoBehaviour
     {
         Debug.Log("Nitro Boost Activated");
         playerRb.AddForce(player.transform.forward * nitroForce, ForceMode.Impulse);
+    }
+
+    public void PlayerFall()
+    {
+        Debug.Log("Player fell off of map");
     }
 }
