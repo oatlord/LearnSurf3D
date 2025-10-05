@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: a4e60dd362049cc479c8c42918de31c5
   - enabled: 1
-    path: Assets/Scenes/CategoriesScene.unity
-    guid: db627ba463a15934ab7df97f9ed52d89
+    path: Assets/Scenes/Category.unity
+    guid: 1861620445174bc4b8650e85ce9843d9
   - enabled: 1
     path: Assets/Scenes/LearnSurf3DWorkplace.unity
     guid: e7d1249a85579114ab0047ff00c6d7e1
