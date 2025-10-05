@@ -15,7 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Category.unity
     guid: 1861620445174bc4b8650e85ce9843d9
   - enabled: 1
+    path: Assets/Scenes/Math.unity
+    guid: 9da182e5bae152d47b33f82018fbcaea
+  - enabled: 1
     path: Assets/Scenes/LearnSurf3DWorkplace.unity
     guid: e7d1249a85579114ab0047ff00c6d7e1
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: 9a3671f0fd914104ea4ce7cb92d95953
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: b2b07d4b708b06d47b53f35b5946e0cc, type: 3}
