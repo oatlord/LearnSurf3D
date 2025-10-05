@@ -28,11 +28,11 @@ public class Timer : MonoBehaviour
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
-            Debug.Log("Remaining Time: " + remainingTime);
+            // Debug.Log("Remaining Time: " + remainingTime);
         }
         else
         {
-            Debug.Log("Time's up!");
+            // Debug.Log("Time's up!");
             remainingTime = 0;
         }
 
@@ -46,8 +46,8 @@ public class Timer : MonoBehaviour
         seconds = Mathf.Floor(remainingTime % 60);
         milliseconds = Mathf.Floor((remainingTime % 1) * 1000);
 
-        string timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
-        Debug.Log("Time: " + timeString);
+        // string timeString = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
+        // Debug.Log("Time: " + timeString);
         timerText.SetText(string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds));
     }
 }
