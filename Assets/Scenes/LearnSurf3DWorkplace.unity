@@ -79899,6 +79899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2116240184131247070, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4676939500029957783, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -79917,7 +79921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5478880180436918406, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: groundDistance
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8729483227528170045, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalPosition.y
