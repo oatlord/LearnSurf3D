@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStatusManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class GameStatusManager : MonoBehaviour
         {
             Debug.Log("Game Over");
             // Implement game over logic here (e.g., stop the game, show game over screen, etc.)
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }
