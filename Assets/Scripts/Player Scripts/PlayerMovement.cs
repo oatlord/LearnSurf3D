@@ -67,12 +67,12 @@ public class PlayerMovement : MonoBehaviour
         // }
         // platformRotation = ;
 
-        if (groundCheck)
-        {
-            // Smoothly rotate player to match the platform normal
-            Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
-        }
+        // if (groundCheck)
+        // {
+        //     // Smoothly rotate player to match the platform normal
+        //     Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+        //     transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+        // }
 
         Debug.Log("Ground Check: " + groundCheck);
         // Debug.Log("Hit: " + hit.transform.name);
