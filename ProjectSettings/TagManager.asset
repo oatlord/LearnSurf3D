@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Collectable
   - Checkpoint
+  - LeftRotationTrigger
+  - RightRotationTrigger
+  - MiddleRotationTrigger
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - RotationTriggers
   - 
   - 
   - 

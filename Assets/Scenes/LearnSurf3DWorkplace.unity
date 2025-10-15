@@ -29420,9 +29420,9 @@ GameObject:
   - component: {fileID: 822982471}
   - component: {fileID: 822982470}
   - component: {fileID: 822982469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftCldr
-  m_TagString: Untagged
+  m_TagString: LeftRotationTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29457,7 +29457,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -45626,6 +45626,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266288882}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1277764743 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 556109106212531222, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
+  m_PrefabInstance: {fileID: 8642487924907660012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1277898416
 GameObject:
   m_ObjectHideFlags: 0
@@ -45953,9 +45958,9 @@ GameObject:
   - component: {fileID: 1287327178}
   - component: {fileID: 1287327177}
   - component: {fileID: 1287327176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightCldr
-  m_TagString: Untagged
+  m_TagString: RightRotationTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45990,7 +45995,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -64342,9 +64347,9 @@ GameObject:
   - component: {fileID: 1747357265}
   - component: {fileID: 1747357264}
   - component: {fileID: 1747357263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidCldr
-  m_TagString: Untagged
+  m_TagString: MiddleRotationTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64379,7 +64384,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -80065,6 +80070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4874818448381092480, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
+      propertyPath: remainingTime
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -80210,7 +80219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 783710035809616290, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.27
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 783710035809616290, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80340,6 +80349,10 @@ PrefabInstance:
       propertyPath: groundDistance
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5970888194226010827, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
+      propertyPath: rotationCheckPoint
+      value: 
+      objectReference: {fileID: 1277764743}
     - target: {fileID: 8729483227528170045, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.86
@@ -80365,6 +80378,6 @@ SceneRoots:
   - {fileID: 8642487924907660012}
   - {fileID: 995841687}
   - {fileID: 154162336}
+  - {fileID: 1948573006}
   - {fileID: 1826046132}
   - {fileID: 259095755}
-  - {fileID: 1948573006}
