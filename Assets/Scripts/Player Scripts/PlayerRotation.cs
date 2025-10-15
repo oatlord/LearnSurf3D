@@ -11,11 +11,16 @@ public class PlayerRotation : MonoBehaviour
     public float rotationCheckRadius;
     public float rotationCheckDistance;
     public Transform rotationCheckPoint;
+    public Transform groundCheckPoint;
+    public float groundDistance = 0.5f;
+    public LayerMask groundLayer;
     public LayerMask rotationTriggers;
 
     private Quaternion targetRotation;
     private bool rotationCheck;
-    private string lastTriggerTag = "";
+    private bool groundCheck;
+    // private bool rotationChanged;
+    // private string lastTriggerTag = "";
 
     
     // Start is called before the first frame update
@@ -31,28 +36,73 @@ public class PlayerRotation : MonoBehaviour
         RaycastHit hit;
         rotationCheck = Physics.SphereCast(rotationCheckPoint.position, rotationCheckRadius, Vector3.down, out hit, rotationCheckDistance, rotationTriggers, QueryTriggerInteraction.Collide);
 
-        if (rotationCheck) {
-            string currentTag = hit.transform.tag;
-            if (currentTag != lastTriggerTag) {
-                Debug.Log("Rotation Trigger Hit: " + hit.transform.name);
-                switch (currentTag) {
-                    case "LeftRotationTrigger":
-                        targetRotation = Quaternion.Euler(0, 0, -incline);
-                        break;
-                    case "RightRotationTrigger":
-                        targetRotation = Quaternion.Euler(0, 0, incline);
-                        break;
-                    case "MiddleRotationTrigger":
-                        targetRotation = Quaternion.Euler(0, 0, 0);
-                        break;
-                }
-                lastTriggerTag = currentTag;
-            }
-        } else {
-            lastTriggerTag = "";
+        RaycastHit groundHit;
+        groundCheck = Physics.Raycast(groundCheckPoint.position, Vector3.down, out groundHit, groundDistance, groundLayer);
+
+        // if (rotationCheck)
+        // {
+        //     string currentTag = hit.transform.tag;
+        //     if (currentTag != lastTriggerTag)
+        //     {
+        //         Debug.Log("Rotation Trigger Hit: " + hit.transform.name);
+        //         switch (currentTag)
+        //         {
+        //             case "LeftRotationTrigger":
+        //                 targetRotation = Quaternion.Euler(0, 0, -incline);
+        //                 rotationChanged = true;
+        //                 break;
+        //             case "RightRotationTrigger":
+        //                 targetRotation = Quaternion.Euler(0, 0, incline);
+        //                 rotationChanged = true;
+        //                 break;
+        //             case "MiddleRotationTrigger":
+        //                 targetRotation = Quaternion.Euler(0, 0, 0);
+        //                 rotationChanged = true;
+        //                 break;
+        //         }
+        //         lastTriggerTag = currentTag;
+        //     } else {
+        //         rotationChanged = false;
+        //     }
+        // }
+        // else
+        // {
+        //     lastTriggerTag = "";
+        // }
+        // Debug.Log("Rotation Check: " + rotationCheck);
+
+        // if (rotationChanged)
+        // {
+        //     transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+        // }
+
+        if (rotationCheck)
+        {
+            // Smoothly rotate player to match the platform normal
+            // if (hit.transform.tag.CompareTo("MiddleRotationTrigger") == 0)
+            // {
+            //     targetRotation = Quaternion.Euler(0, 0, 0);
+            // } else {
+            //     targetRotation = Quaternion.FromToRotation(transform.up, groundHit.normal) * transform.rotation;
+            // }
+            // if (hit.transform.tag == "LeftRotationTrigger")
+            // {
+            //     targetRotation = Quaternion.Euler(0, 0, -incline);
+            //     Debug.Log("Left Trigger");
+            // }
+            // else if (hit.transform.tag == "RightRotationTrigger")
+            // {
+            //     targetRotation = Quaternion.Euler(0, 0, incline);
+            // }
+            // else if (hit.transform.tag == "MiddleRotationTrigger")
+            // {
+            //     targetRotation = Quaternion.Euler(0, 0, 0);
+            // }
+            Quaternion targetRotation = Quaternion.FromToRotation(transform.up, groundHit.normal);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+            // transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)
@@ -86,5 +136,13 @@ public class PlayerRotation : MonoBehaviour
         // Draw spheres at start and end
         Gizmos.DrawWireSphere(start, rotationCheckRadius);
         Gizmos.DrawWireSphere(end, rotationCheckRadius);
+
+        if (groundCheckPoint == null)
+            return;
+        Gizmos.color = Color.black;
+        Vector3 groundstart = groundCheckPoint.position;
+        Vector3 groundend = groundstart + Vector3.down * groundDistance;
+        // Draw the path of the spherecast
+        Gizmos.DrawLine(groundstart, groundend);
     }
 }
