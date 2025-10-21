@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Math.unity
     guid: 9da182e5bae152d47b33f82018fbcaea
   - enabled: 1
-    path: Assets/Scenes/LearnSurf3DWorkplace.unity
+    path: Assets/Scenes/LearnSurf3DWorkplaceBlue.unity
     guid: e7d1249a85579114ab0047ff00c6d7e1
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
