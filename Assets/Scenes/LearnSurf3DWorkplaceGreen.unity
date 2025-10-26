@@ -78391,6 +78391,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2566543828747488479, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2566543828747488479, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2566543828747488479, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: field of view
       value: 40
       objectReference: {fileID: 0}
@@ -78420,19 +78428,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014707302209437134, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.08
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5014707302209437134, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.68
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: 5014707302209437134, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98260385
+      value: 0.94386315
       objectReference: {fileID: 0}
     - target: {fileID: 5014707302209437134, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1857144
+      value: 0.33033693
       objectReference: {fileID: 0}
     - target: {fileID: 5014707302209437134, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalRotation.y
@@ -78444,7 +78452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5014707302209437134, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 21.406
+      value: 38.578
       objectReference: {fileID: 0}
     - target: {fileID: 5478880180436918406, guid: b1524c979d298fd498e163f82b81f8e0, type: 3}
       propertyPath: jumpForce
