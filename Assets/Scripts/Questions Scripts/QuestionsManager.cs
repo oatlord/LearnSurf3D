@@ -56,7 +56,7 @@ public class QuestionsManager : MonoBehaviour
         questionIndex = (questionIndex + 1) % questionsList.Count;
     }
 
-    private void CorrectAnswer() {
-        
+    public void CorrectAnswer() {
+        player.GetComponent<PlayerMovement>().playerSpeed += 2f;
     }
 }
