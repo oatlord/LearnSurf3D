@@ -8,6 +8,10 @@ public class QuestionsManager : MonoBehaviour
     // Start is called before the first frame update
     public List<string> questionsList;
     public TextMeshProUGUI questionText;
+    public GameObject player;
+    public LayerMask groundLayer;
+    public Transform groundCheckPosition;
+    public float groundDistance = 0.5f;
     private int questionIndex;
     void Start()
     {
@@ -20,6 +24,11 @@ public class QuestionsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // RaycastHit hit;
+        // if (Physics.Raycast(player.transform.position, Vector3.down, out hit, groundDistance, groundLayer))
+        // {
+        //     Debug.Log("Player is grounded on: " + hit.transform.name);
+        // }
 
     }
 
@@ -45,5 +54,9 @@ public class QuestionsManager : MonoBehaviour
 
         // Advance index and wrap around so subsequent calls show next question
         questionIndex = (questionIndex + 1) % questionsList.Count;
+    }
+
+    private void CorrectAnswer() {
+        
     }
 }
