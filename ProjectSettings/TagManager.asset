@@ -10,6 +10,8 @@ TagManager:
   - LeftRotationTrigger
   - RightRotationTrigger
   - MiddleRotationTrigger
+  - CorrectPlatform
+  - WrongPlatform
   layers:
   - Default
   - TransparentFX

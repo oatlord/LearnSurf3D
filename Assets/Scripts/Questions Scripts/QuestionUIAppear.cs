@@ -30,6 +30,7 @@ public class QuestionUIAppear : MonoBehaviour
             // questionNumber += 1;
             if (questionsManager != null) {
                 questionsManager.ShowQuestion();
+                questionsManager.ShowChoices();
             } else {
                 Debug.LogWarning("QuestionUIAppear: questionsManager reference is not assigned.");
             }
