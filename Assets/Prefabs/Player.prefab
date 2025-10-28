@@ -203,10 +203,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.1389217
-  m_Height: 6.2778435
+  m_Radius: 2
+  m_Height: 3.4
   m_Direction: 1
-  m_Center: {x: 2.1389196, y: 2, z: 1.0000001}
+  m_Center: {x: 2.3, y: 1, z: 1.5}
 --- !u!114 &5478880180436918406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,8 +717,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3688192261204800579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33033317, y: 0, z: 0, w: 0.94386446}
-  m_LocalPosition: {x: 2.06, y: 9, z: -8.8}
+  m_LocalRotation: {x: 0.33033693, y: -0, z: -0, w: 0.94386315}
+  m_LocalPosition: {x: 2.09, y: 9, z: -8.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -755,11 +755,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -891,7 +891,7 @@ Transform:
   m_GameObject: {fileID: 6404473931665068625}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.11, y: -0.98, z: 0.73}
+  m_LocalPosition: {x: 2.11, y: -0.86, z: 1.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
