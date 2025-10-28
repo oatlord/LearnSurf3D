@@ -224,9 +224,9 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckPoint: {fileID: 8729483227528170045}
   slowDownRate: 2
-  groundDistance: 0.4
-  playerSpeed: 20
-  jumpForce: 1
+  groundDistance: 0.7
+  playerSpeed: 40
+  jumpForce: 0.4
 --- !u!114 &524404392863036953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   incline: 25
   rotationCheckRadius: 1
   rotationCheckDistance: 5
-  rotationCheckPoint: {fileID: 0}
+  rotationCheckPoint: {fileID: 556109106212531222}
   groundCheckPoint: {fileID: 8729483227528170045}
   groundDistance: 4
   groundLayer:
