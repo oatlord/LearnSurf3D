@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 980122987728654702}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9300523, y: 5.9999995, z: 38.5}
+  m_LocalPosition: {x: -2.9300523, y: 5.9999995, z: 58}
   m_LocalScale: {x: 1.5057, y: 1.8318, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67,6 +67,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionCanvas: {fileID: 0}
+  player: {fileID: 0}
+  questionsManager: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  groundDistance: 0.5
+  groundCheckPosition: {fileID: 0}
 --- !u!1 &2252722792020647789
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +101,7 @@ Transform:
   m_GameObject: {fileID: 2252722792020647789}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9300523, y: 6, z: 5.46}
+  m_LocalPosition: {x: -2.9300523, y: 6, z: -74.6}
   m_LocalScale: {x: 1.5057, y: 1.8318, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
