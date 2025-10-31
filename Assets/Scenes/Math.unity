@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReturnObject: {fileID: 1761063311}
-  ThisScene: LearnSurf3DWorkplace
+  ThisScene: LearnSurf3DWorkplaceBlue
 --- !u!4 &1364147843
 Transform:
   m_ObjectHideFlags: 0
