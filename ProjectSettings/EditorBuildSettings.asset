@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Category.unity
     guid: 1861620445174bc4b8650e85ce9843d9
   - enabled: 1
-    path: Assets/Scenes/Math.unity
+    path: Assets/Scenes/LevelSelectors/Math.unity
     guid: 9da182e5bae152d47b33f82018fbcaea
   - enabled: 1
     path: Assets/Scenes/LearnSurf3DWorkplaceBlue.unity

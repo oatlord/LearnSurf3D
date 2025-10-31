@@ -79659,6 +79659,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 571640413516154486, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 571640413516154486, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 571640413516154486, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 2292207153994006943, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -79742,6 +79754,10 @@ PrefabInstance:
     - target: {fileID: 3941832204936654217, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
       propertyPath: m_Name
       value: GameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941832204936654217, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874818448381092480, guid: f5eea3f78cd55a446b15eefcaa2f1d90, type: 3}
       propertyPath: remainingTime
